@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Support\Facades\DB;
+use Coderello\VirtualFields\VirtualField;
+
+class DummyClass extends VirtualField
+{
+    public function getVirtualValue()
+    {
+        // return DB::table('comments')
+        //     ->whereColumn('post_id', 'posts.id')
+        //     ->selectRaw('COUNT(*)');
+    }
+
+    public function getCast(): ?string
+    {
+        // return 'integer';
+    }
+}

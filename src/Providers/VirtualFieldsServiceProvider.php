@@ -4,6 +4,7 @@ namespace Coderello\VirtualFields\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
+use Coderello\VirtualFields\Commands\VirtualFieldMakeCommand;
 
 class VirtualFieldsServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,8 @@ class VirtualFieldsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->commands([
+            VirtualFieldMakeCommand::class,
+        ]);
     }
 }
