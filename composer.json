@@ -1,0 +1,32 @@
+{
+    "name": "coderello/laravel-virtual-fields",
+    "description": "Laravel virtual fields brings in virtual fields for Eloquent models.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coderello\\VirtualFields\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coderello\\VirtualFields\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coderello\\VirtualFields\\Providers\\VirtualFieldsServiceProvider"
+            ]
+        }
+    }
+}
